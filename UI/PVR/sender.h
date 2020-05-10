@@ -11,6 +11,17 @@
 #include <hardforkromming_send.h>
 #include <elektrolytisk_fornikling_send.h>
 #include <fosfatering_send.h>
+#include <galvanisering_send.h>
+#include <syrevask_send.h>
+#include <brunering_send.h>
+#include <herding_send.h>
+#include <sett_herding_send.h>
+#include <nitrering_send.h>
+#include <plasma_nitrering_send.h>
+#include <sliping_send.h>
+#include <traadskjaering_send.h>
+#include <glass_blaasing_send.h>
+#include <sandblaasing_send.h>
 
 namespace Ui {
 class sender;
@@ -69,8 +80,45 @@ private slots:
 
 //kjemisk metode vindu----------------------------------------------------------------------------------------------------------------
 
-    void on_fosfatering_clicked();
-    void tilbake_0_fosfatering_bedrifter();
+    void on_fosfatering_clicked();                                  //fosfatering
+    void tilbake_0_fosfatering_bedrifter();                         //tilbake fra fosfatering til kjemisk metode
+
+    void on_galvanisering_varmforsinking_clicked();                 //galvanisering/varmforsinking
+    void tilbake_0_galvanisering_bedrifter();                       //tilbake fra galvanisering/varmforsinking til kjemisk metode
+
+    void on_syrevask_clicked();                                     //syrevask
+    void tilbake_0_syrevask_bedrifter();                            //tilbake fra syrevask til kjemisk metode
+
+    void on_brunering_clicked();                                    //brunering
+    void tilbake_0_brunering_bedrifter();                           //tilbake fra brunering til kjemisk metode
+
+//herding vindu----------------------------------------------------------------------------------------------------------------
+
+    void on_herd_herding_clicked();                                 //herding
+    void tilbake_0_herding_bedrifter();                             //tilbake fra herding til herding
+
+    void on_sett_herding_clicked();                                 //sett-herding
+    void tilbake_0_sett_herding_bedrifter();                        //tilbake fra sett-herding til herding
+
+    void on_nitrering_clicked();                                    //nitrering
+    void tilbake_0_nitrering_bedrifter();                           //tilbake fra nitrering til herding
+
+    void on_plasma_nitrering_clicked();                             //plasma nitrering
+    void tilbake_0_plasma_nitrering_bedrifter();                    //tilbake fra plasma nitrering til herding
+
+//annet vindu----------------------------------------------------------------------------------------------------------------
+
+    void on_sliping_clicked();                                      //sliping
+    void tilbake_0_sliping_bedrifter();                             //tilbake fra sliping til annet
+
+    void on_traadskjaering_clicked();                               //trådskjæring
+    void tilbake_0_traadskjaering_bedrifter();                      //tilbake fra trådskjæring til annet
+
+    void on_glass_blaasing_clicked();
+    void tilbake_0_glass_blaasing_bedrifter();
+
+    void on_sandblaasing_clicked();
+    void tilbake_0_sandblaasing_bedrifter();
 
 private:
     Ui::sender *ui;
@@ -85,6 +133,19 @@ private:
     class elektrolytisk_fornikling_send _ElektroFornikling;             //objekt for elektrolytisk fornikling (elektrokjemisk metode)
 
     class fosfatering_send _Fosfat;                                     //objekt for fosfatering (kjemisk metode)
+    class galvanisering_send _Galv;                                     //objekt for galvanisering/varmforsinking (kjemisk metode)
+    class syrevask_send _Syre;                                          //objekt for syrevask (kjemisk metode)
+    class brunering_send _Brun;                                         //objekt for brunering (kjemisk metode)
+
+    class herding_send _Herd;                                           //objekt for herding (herding)
+    class sett_herding_send _SettHerd;                                  //objekt for sett-herding (herding)
+    class nitrering_send _Nitrer;                                       //objekt for nitrering (herding)
+    class plasma_nitrering_send _PlasmaNitrer;                          //objekt for plasma nitrering (herding)
+
+    class sliping_send _Sliping;                                        //objekt for sliping (Annet)
+    class traadskjaering_send _Traad;                                   //objekt for trådskjæring (Annet)
+    class glass_blaasing_send _Glass;                                   //objekt for glass blåsing (Annet)
+    class sandblaasing_send _Sand;                                      //objekt for sandblåsing (Annet)
 
 signals:
     void x_0_send_clicked(); //avslutt (tilbake til hjem/logg inn) - mainwindow.cpp - SIGNAL

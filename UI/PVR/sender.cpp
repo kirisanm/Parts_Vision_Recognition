@@ -32,6 +32,18 @@ sender::sender(QWidget *parent) :
     ui->stackedWidget->insertWidget(12, &_Hardforkrom);                 //Setter inn hardforkromming.cpp i index 12, side 13
     ui->stackedWidget->insertWidget(13, &_ElektroFornikling);           //Setter inn elektrolytisk_fornikling.cpp i index 13, side 14
     ui->stackedWidget->insertWidget(14, &_Fosfat);                      //Setter inn fosfatering.cpp i index 14, side 15
+    ui->stackedWidget->insertWidget(15, &_Galv);                        //Setter inn galvanisering.cpp i index 15, side 16
+    ui->stackedWidget->insertWidget(16, &_Syre);                        //Setter inn syrevask.cpp i index 16, side 17
+    ui->stackedWidget->insertWidget(17, &_Brun);                        //Setter inn brunering.cpp i index 17, side 18
+    ui->stackedWidget->insertWidget(18, &_Herd);                        //Setter inn herding.cpp i index 18, side 19
+    ui->stackedWidget->insertWidget(19, &_SettHerd);                    //Setter inn sett_herding.cpp i index 19, side 20
+    ui->stackedWidget->insertWidget(20, &_Nitrer);                      //Setter inn nitrering.cpp i index 20, side 21
+    ui->stackedWidget->insertWidget(21, &_PlasmaNitrer);                //Setter inn plasma_nitrering.cpp i index 21, side 22
+    ui->stackedWidget->insertWidget(22, &_Sliping);                     //Setter inn sliping.cpp i index 22, side 23
+    ui->stackedWidget->insertWidget(23, &_Traad);                       //Setter inn traadskjaering.cpp i index 23, side 24
+    ui->stackedWidget->insertWidget(24, &_Glass);                       //Setter inn glass_blaasing.cpp i index 24, side 25
+    ui->stackedWidget->insertWidget(25, &_Sand);                        //Setter inn sandblaasing.cpp i index 25, side 26
+
 
     //Lakkering
     connect(&_Vaatlakk, SIGNAL(tilbake_0_vaat_bedrifter_clicked()), this, SLOT(tilbake_0_vaat_bedrifter()));
@@ -47,6 +59,21 @@ sender::sender(QWidget *parent) :
 
     //kjemisk_metode
     connect(&_Fosfat, SIGNAL(tilbake_0_fosfatering_bedrifter_clicked()), this, SLOT(tilbake_0_fosfatering_bedrifter()));
+    connect(&_Galv, SIGNAL(tilbake_0_galvanisering_bedrifter_clicked()), this, SLOT(tilbake_0_galvanisering_bedrifter()));
+    connect(&_Syre, SIGNAL(tilbake_0_syrevask_bedrifter_clicked()), this, SLOT(tilbake_0_syrevask_bedrifter()));
+    connect(&_Brun, SIGNAL(tilbake_0_brunering_bedrifter_clicked()), this, SLOT(tilbake_0_brunering_bedrifter()));
+
+    //herding
+    connect(&_Herd, SIGNAL(tilbake_0_herding_bedrifter_clicked()), this, SLOT(tilbake_0_herding_bedrifter()));
+    connect(&_SettHerd, SIGNAL(tilbake_0_sett_herding_bedrifter_clicked()), this, SLOT(tilbake_0_sett_herding_bedrifter()));
+    connect(&_Nitrer, SIGNAL(tilbake_0_nitrering_bedrifter_clicked()), this, SLOT(tilbake_0_nitrering_bedrifter()));
+    connect(&_PlasmaNitrer, SIGNAL(tilbake_0_plasma_nitrering_bedrifter_clicked()), this, SLOT(tilbake_0_plasma_nitrering_bedrifter()));
+
+    //annet
+    connect(&_Sliping, SIGNAL(tilbake_0_sliping_bedrifter_clicked()), this, SLOT(tilbake_0_sliping_bedrifter()));
+    connect(&_Traad, SIGNAL(tilbake_0_traadskjaering_bedrifter_clicked()), this, SLOT(tilbake_0_traadskjaering_bedrifter()));
+    connect(&_Glass, SIGNAL(tilbake_0_glass_blaasing_bedrifter_clicked()), this, SLOT(tilbake_0_glass_blaasing_bedrifter()));
+    connect(&_Sand, SIGNAL(tilbake_0_sandblaasing_bedrifter_clicked()), this, SLOT(tilbake_0_sandblaasing_bedrifter()));
 }
 
 sender::~sender()
@@ -155,15 +182,116 @@ void sender::on_kjemisk_metode_clicked()
         ui->stackedWidget->setCurrentIndex(3);
     }
 
+    void sender::on_galvanisering_varmforsinking_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(15);
+    }
+    void sender::tilbake_0_galvanisering_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(3);
+    }
+
+    void sender::on_syrevask_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(16);
+    }
+    void sender::tilbake_0_syrevask_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(3);
+    }
+
+    void sender::on_brunering_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(17);
+    }
+    void sender::tilbake_0_brunering_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(3);
+    }
+
+//herding vindu-------------------------------------------------------------------------------
 void sender::on_herding_clicked()
 {
     ui->stackedWidget->setCurrentIndex(4); //index 4, side 5 - Herding
 }
+    void sender::on_herd_herding_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(18);
+    }
+    void sender::tilbake_0_herding_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(4);
+    }
 
+    void sender::on_sett_herding_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(19);
+    }
+    void sender::tilbake_0_sett_herding_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(4);
+    }
+
+    void sender::on_nitrering_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(20);
+    }
+    void sender::tilbake_0_nitrering_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(4);
+    }
+
+    void sender::on_plasma_nitrering_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(21);
+    }
+    void sender::tilbake_0_plasma_nitrering_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(4);
+    }
+
+//annet vindu-------------------------------------------------------------------------------
 void sender::on_annet_clicked()
 {
     ui->stackedWidget->setCurrentIndex(5); //index5, side 6 - Annet
 }
+    void sender::on_sliping_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(22);
+    }
+    void sender::tilbake_0_sliping_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(5);
+    }
+
+    void sender::on_traadskjaering_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(23);
+    }
+    void sender::tilbake_0_traadskjaering_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(5);
+    }
+
+    void sender::on_glass_blaasing_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(24);
+    }
+    void sender::tilbake_0_glass_blaasing_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(5);
+    }
+
+    void sender::on_sandblaasing_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(25);
+    }
+    void sender::tilbake_0_sandblaasing_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(5);
+    }
+
+
 
 
 // Tilleggs widgets: --------------------------------------------------------------------------------------------------------
@@ -201,6 +329,30 @@ void sender::on_tilbake_5_annet_send_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

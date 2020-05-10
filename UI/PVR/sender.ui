@@ -17,7 +17,7 @@
    <item row="0" column="0">
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="currentIndex">
-      <number>3</number>
+      <number>5</number>
      </property>
      <widget class="QWidget" name="side_send">
       <widget class="QPushButton" name="x_0_send">
@@ -641,7 +641,7 @@
         <string>Sett-herding</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="herding_2">
+      <widget class="QPushButton" name="herd_herding">
        <property name="geometry">
         <rect>
          <x>110</x>

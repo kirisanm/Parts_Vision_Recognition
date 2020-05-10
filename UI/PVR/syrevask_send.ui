@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>kromatering_send</class>
- <widget class="QWidget" name="kromatering_send">
+ <class>syrevask_send</class>
+ <widget class="QWidget" name="syrevask_send">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -16,50 +16,8 @@
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <widget class="QStackedWidget" name="stackedWidget">
-     <widget class="QWidget" name="side_kromatering_bedrifter">
-      <widget class="QPushButton" name="eloksal">
-       <property name="geometry">
-        <rect>
-         <x>40</x>
-         <y>380</y>
-         <width>311</width>
-         <height>221</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>20</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(0, 255, 0);</string>
-       </property>
-       <property name="text">
-        <string>Eloksal AS</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="gundersen_galvano">
-       <property name="geometry">
-        <rect>
-         <x>910</x>
-         <y>380</y>
-         <width>311</width>
-         <height>221</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>20</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true"/>
-       </property>
-       <property name="text">
-        <string>Gundersen Galvano AS</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="tilbake_0_kromatering_bedrifter">
+     <widget class="QWidget" name="side_syrevask_bedrifter">
+      <widget class="QPushButton" name="tilbake_0_syrevask_bedrifter">
        <property name="geometry">
         <rect>
          <x>1110</x>
@@ -72,35 +30,22 @@
         <string>&lt;</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="eiker_overflateteknikk">
+      <widget class="QLabel" name="modus_0">
        <property name="geometry">
         <rect>
-         <x>470</x>
-         <y>380</y>
-         <width>311</width>
-         <height>221</height>
+         <x>0</x>
+         <y>0</y>
+         <width>621</width>
+         <height>25</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <pointsize>20</pointsize>
+         <pointsize>15</pointsize>
         </font>
        </property>
        <property name="text">
-        <string>Eiker Overflateteknikk AS</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="logo_tepvr_0">
-       <property name="geometry">
-        <rect>
-         <x>760</x>
-         <y>0</y>
-         <width>481</width>
-         <height>94</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
+        <string>Valgt modus: Send | Kjemisk metode | Syrevask</string>
        </property>
       </widget>
       <widget class="QPushButton" name="gundersen_galvano_vestby">
@@ -117,8 +62,32 @@
          <pointsize>20</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 255, 0);</string>
+       </property>
        <property name="text">
         <string>Gundersen Galvano AS (Vestby Galvaniske)</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="eiker_overflateteknikk">
+       <property name="geometry">
+        <rect>
+         <x>660</x>
+         <y>380</y>
+         <width>561</width>
+         <height>221</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 255, 0);</string>
+       </property>
+       <property name="text">
+        <string>Eiker Overflateteknikk AS</string>
        </property>
       </widget>
       <widget class="QPushButton" name="nct">
@@ -142,39 +111,42 @@
         <string>Norwegian Coating Technologies (NCT)</string>
        </property>
       </widget>
-      <widget class="QLabel" name="modus_0">
+      <widget class="QPushButton" name="tl">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>621</width>
-         <height>25</height>
+         <x>40</x>
+         <y>380</y>
+         <width>561</width>
+         <height>221</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>20</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
        <property name="text">
-        <string>Valgt modus: Send | Elektrokjemisk metode | Kromatering</string>
+        <string>Tl</string>
        </property>
       </widget>
-     </widget>
-     <widget class="QWidget" name="side_kromatering_eloksal">
-      <widget class="QPushButton" name="tilbake_1_eloksal">
+      <widget class="QLabel" name="logo_tepvr_0">
        <property name="geometry">
         <rect>
-         <x>1110</x>
-         <y>650</y>
-         <width>111</width>
-         <height>61</height>
+         <x>760</x>
+         <y>0</y>
+         <width>481</width>
+         <height>94</height>
         </rect>
        </property>
        <property name="text">
-        <string>&lt;</string>
+        <string/>
        </property>
       </widget>
+     </widget>
+     <widget class="QWidget" name="side_syrevask_tl">
       <widget class="QLabel" name="modus_1_1">
        <property name="geometry">
         <rect>
@@ -190,7 +162,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Bedrift: Eloksal AS</string>
+        <string>Bedrift: Tl</string>
        </property>
       </widget>
       <widget class="QLabel" name="modus_1">
@@ -208,7 +180,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Valgt modus: Send | Elektrokjemisk metode | Kromatering</string>
+        <string>Valgt modus: Send | Kjemisk metode | Syrevask</string>
        </property>
       </widget>
       <widget class="QLabel" name="logo_tepvr_1">
@@ -224,9 +196,35 @@
         <string/>
        </property>
       </widget>
+      <widget class="QPushButton" name="tilbake_1_syrevask_tl">
+       <property name="geometry">
+        <rect>
+         <x>1110</x>
+         <y>650</y>
+         <width>111</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;</string>
+       </property>
+      </widget>
      </widget>
-     <widget class="QWidget" name="side_kromatering_gundersen">
-      <widget class="QPushButton" name="tilbake_2_gundersen">
+     <widget class="QWidget" name="side_syrevask_gunder_galvano_vestby">
+      <widget class="QLabel" name="logo_tepvr_2">
+       <property name="geometry">
+        <rect>
+         <x>760</x>
+         <y>0</y>
+         <width>481</width>
+         <height>94</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="tilbake_2_syrevask_gundersen_vestby">
        <property name="geometry">
         <rect>
          <x>1110</x>
@@ -254,43 +252,10 @@
         </font>
        </property>
        <property name="text">
-        <string>Valgt modus: Send | Elektrokjemisk metode | Kromatering</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="logo_tepvr_2">
-       <property name="geometry">
-        <rect>
-         <x>760</x>
-         <y>0</y>
-         <width>481</width>
-         <height>94</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
+        <string>Valgt modus: Send | Kjemisk metode | Syrevask</string>
        </property>
       </widget>
       <widget class="QLabel" name="modus_2_1">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>30</y>
-         <width>361</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Bedrift: Gundersen Galvano AS</string>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="side_kromatering_gundersen_vestby">
-      <widget class="QLabel" name="modus_3_1">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -308,6 +273,8 @@
         <string>Bedrift: Gundersen Galvano AS (Vestby Galvaniske)</string>
        </property>
       </widget>
+     </widget>
+     <widget class="QWidget" name="side_syrevask_eiker">
       <widget class="QLabel" name="logo_tepvr_3">
        <property name="geometry">
         <rect>
@@ -319,19 +286,6 @@
        </property>
        <property name="text">
         <string/>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="tilbake_3_gundersen_vestby">
-       <property name="geometry">
-        <rect>
-         <x>1110</x>
-         <y>650</y>
-         <width>111</width>
-         <height>61</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>&lt;</string>
        </property>
       </widget>
       <widget class="QLabel" name="modus_3">
@@ -349,56 +303,10 @@
         </font>
        </property>
        <property name="text">
-        <string>Valgt modus: Send | Elektrokjemisk metode | Kromatering</string>
+        <string>Valgt modus: Send | Kjemisk metode | Syrevask</string>
        </property>
       </widget>
-     </widget>
-     <widget class="QWidget" name="side_kromatering_eiker">
-      <widget class="QLabel" name="logo_tepvr_4">
-       <property name="geometry">
-        <rect>
-         <x>760</x>
-         <y>0</y>
-         <width>481</width>
-         <height>94</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-      <widget class="QLabel" name="modus_4">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>621</width>
-         <height>25</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Valgt modus: Send | Elektrokjemisk metode | Kromatering</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="tilbake_4_eiker">
-       <property name="geometry">
-        <rect>
-         <x>1110</x>
-         <y>650</y>
-         <width>111</width>
-         <height>61</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>&lt;</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="modus_4_1">
+      <widget class="QLabel" name="modus_3_1">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -416,9 +324,7 @@
         <string>Bedrift: Eiker Overflateteknikk AS</string>
        </property>
       </widget>
-     </widget>
-     <widget class="QWidget" name="side_kromatering_nct">
-      <widget class="QPushButton" name="tilbake_5_nct">
+      <widget class="QPushButton" name="tilbake_3_syrevask_eiker">
        <property name="geometry">
         <rect>
          <x>1110</x>
@@ -431,20 +337,22 @@
         <string>&lt;</string>
        </property>
       </widget>
-      <widget class="QLabel" name="logo_tepvr_5">
+     </widget>
+     <widget class="QWidget" name="side_syrevask_nct">
+      <widget class="QPushButton" name="tilbake_4_syrevask_nct">
        <property name="geometry">
         <rect>
-         <x>760</x>
-         <y>0</y>
-         <width>481</width>
-         <height>94</height>
+         <x>1110</x>
+         <y>650</y>
+         <width>111</width>
+         <height>61</height>
         </rect>
        </property>
        <property name="text">
-        <string/>
+        <string>&lt;</string>
        </property>
       </widget>
-      <widget class="QLabel" name="modus_5_1">
+      <widget class="QLabel" name="modus_4_1">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -462,7 +370,7 @@
         <string>Bedrift: Norwegian Coating Technologies (NCT)</string>
        </property>
       </widget>
-      <widget class="QLabel" name="modus_5">
+      <widget class="QLabel" name="modus_4">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -477,7 +385,20 @@
         </font>
        </property>
        <property name="text">
-        <string>Valgt modus: Send | Elektrokjemisk metode | Kromatering</string>
+        <string>Valgt modus: Send | Kjemisk metode | Syrevask</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="logo_tepvr_4">
+       <property name="geometry">
+        <rect>
+         <x>760</x>
+         <y>0</y>
+         <width>481</width>
+         <height>94</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </widget>
