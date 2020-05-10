@@ -133,17 +133,17 @@ private slots:
     void on_polering_clicked();                                     //polering
     void tilbake_0_polering_bedrifter();                            //tilbake fra polering til annet
 
-    void on_elektrolytisk_polering_clicked();
-    void tilbake_0_elektrolytisk_polering_bedrifter();
+    void on_elektrolytisk_polering_clicked();                       //elektrolytisk polering
+    void tilbake_0_elektrolytisk_polering_bedrifter();              //tilbake fra elektrolytisk polering til annet
 
-    void on_forsolving_gullbelegging_clicked();
-    void tilbake_0_forsolving_bedrifter();
+    void on_forsolving_gullbelegging_clicked();                     //forsølving
+    void tilbake_0_forsolving_bedrifter();                          //tilbake fra forsølving til annet
 
-    void on_gullbelegging_clicked();
-    void tilbake_0_gullbelegging_bedrifter();
+    void on_gullbelegging_clicked();                                //gullbelegging
+    void tilbake_0_gullbelegging_bedrifter();                       //tilbake fra gullbelegging til annet
 
-    void on_fortinning_clicked();
-    void tilbake_0_fortinning_bedrifter();
+    void on_fortinning_clicked();                                   //fortinning
+    void tilbake_0_fortinning_bedrifter();                          //tilbake fra fortinning til annet
 
 private:
     Ui::sender *ui;

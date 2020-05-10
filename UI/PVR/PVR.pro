@@ -19,6 +19,7 @@ SOURCES += \
     brunering_send.cpp \
     elektrolytisk_fornikling_send.cpp \
     elektrolytisk_polering_send.cpp \
+    eloksering_motta.cpp \
     eloksering_send.cpp \
     elzink_send.cpp \
     forsolving_send.cpp \
@@ -29,15 +30,18 @@ SOURCES += \
     gullbelegging_send.cpp \
     hardforkromming_send.cpp \
     herding_send.cpp \
+    kromatering_motta.cpp \
     kromatering_send.cpp \
     kuleblaasing_send.cpp \
     main.cpp \
     mainwindow.cpp \
     mottar.cpp \
     nitrering_send.cpp \
+    offshore_lakkering_motta.cpp \
     offshore_lakkering_send.cpp \
     plasma_nitrering_send.cpp \
     polering_send.cpp \
+    pulverlakkering_motta.cpp \
     pulverlakkering_send.cpp \
     sandblaasing_send.cpp \
     sender.cpp \
@@ -45,12 +49,14 @@ SOURCES += \
     sliping_send.cpp \
     syrevask_send.cpp \
     traadskjaering_send.cpp \
+    vaatlakkering_motta.cpp \
     vaatlakkering_send.cpp
 
 HEADERS += \
     brunering_send.h \
     elektrolytisk_fornikling_send.h \
     elektrolytisk_polering_send.h \
+    eloksering_motta.h \
     eloksering_send.h \
     elzink_send.h \
     forsolving_send.h \
@@ -61,14 +67,17 @@ HEADERS += \
     gullbelegging_send.h \
     hardforkromming_send.h \
     herding_send.h \
+    kromatering_motta.h \
     kromatering_send.h \
     kuleblaasing_send.h \
     mainwindow.h \
     mottar.h \
     nitrering_send.h \
+    offshore_lakkering_motta.h \
     offshore_lakkering_send.h \
     plasma_nitrering_send.h \
     polering_send.h \
+    pulverlakkering_motta.h \
     pulverlakkering_send.h \
     sandblaasing_send.h \
     sender.h \
@@ -76,12 +85,14 @@ HEADERS += \
     sliping_send.h \
     syrevask_send.h \
     traadskjaering_send.h \
+    vaatlakkering_motta.h \
     vaatlakkering_send.h
 
 FORMS += \
     brunering_send.ui \
     elektrolytisk_fornikling_send.ui \
     elektrolytisk_polering_send.ui \
+    eloksering_motta.ui \
     eloksering_send.ui \
     elzink_send.ui \
     forsolving_send.ui \
@@ -92,14 +103,17 @@ FORMS += \
     gullbelegging_send.ui \
     hardforkromming_send.ui \
     herding_send.ui \
+    kromatering_motta.ui \
     kromatering_send.ui \
     kuleblaasing_send.ui \
     mainwindow.ui \
     mottar.ui \
     nitrering_send.ui \
+    offshore_lakkering_motta.ui \
     offshore_lakkering_send.ui \
     plasma_nitrering_send.ui \
     polering_send.ui \
+    pulverlakkering_motta.ui \
     pulverlakkering_send.ui \
     sandblaasing_send.ui \
     sender.ui \
@@ -107,6 +121,7 @@ FORMS += \
     sliping_send.ui \
     syrevask_send.ui \
     traadskjaering_send.ui \
+    vaatlakkering_motta.ui \
     vaatlakkering_send.ui
 
 # Default rules for deployment.

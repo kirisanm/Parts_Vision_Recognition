@@ -92,12 +92,11 @@ sender::~sender()
     delete ui;
 }
 
-// lakkeringsvindu-------------------------------------------------------------------------------
+//lakkeringsvindu-------------------------------------------------------------------------------
 void sender::on_lakkering_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1); //index 1, side 2 - Lakkering
 }
-
     void sender::on_vaatlakkering_clicked()
     {
         ui->stackedWidget->setCurrentIndex(6);
