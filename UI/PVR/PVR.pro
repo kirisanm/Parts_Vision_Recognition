@@ -18,20 +18,26 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     brunering_send.cpp \
     elektrolytisk_fornikling_send.cpp \
+    elektrolytisk_polering_send.cpp \
     eloksering_send.cpp \
     elzink_send.cpp \
+    forsolving_send.cpp \
+    fortinning_send.cpp \
     fosfatering_send.cpp \
     galvanisering_send.cpp \
     glass_blaasing_send.cpp \
+    gullbelegging_send.cpp \
     hardforkromming_send.cpp \
     herding_send.cpp \
     kromatering_send.cpp \
+    kuleblaasing_send.cpp \
     main.cpp \
     mainwindow.cpp \
     mottar.cpp \
     nitrering_send.cpp \
     offshore_lakkering_send.cpp \
     plasma_nitrering_send.cpp \
+    polering_send.cpp \
     pulverlakkering_send.cpp \
     sandblaasing_send.cpp \
     sender.cpp \
@@ -44,19 +50,25 @@ SOURCES += \
 HEADERS += \
     brunering_send.h \
     elektrolytisk_fornikling_send.h \
+    elektrolytisk_polering_send.h \
     eloksering_send.h \
     elzink_send.h \
+    forsolving_send.h \
+    fortinning_send.h \
     fosfatering_send.h \
     galvanisering_send.h \
     glass_blaasing_send.h \
+    gullbelegging_send.h \
     hardforkromming_send.h \
     herding_send.h \
     kromatering_send.h \
+    kuleblaasing_send.h \
     mainwindow.h \
     mottar.h \
     nitrering_send.h \
     offshore_lakkering_send.h \
     plasma_nitrering_send.h \
+    polering_send.h \
     pulverlakkering_send.h \
     sandblaasing_send.h \
     sender.h \
@@ -69,19 +81,25 @@ HEADERS += \
 FORMS += \
     brunering_send.ui \
     elektrolytisk_fornikling_send.ui \
+    elektrolytisk_polering_send.ui \
     eloksering_send.ui \
     elzink_send.ui \
+    forsolving_send.ui \
+    fortinning_send.ui \
     fosfatering_send.ui \
     galvanisering_send.ui \
     glass_blaasing_send.ui \
+    gullbelegging_send.ui \
     hardforkromming_send.ui \
     herding_send.ui \
     kromatering_send.ui \
+    kuleblaasing_send.ui \
     mainwindow.ui \
     mottar.ui \
     nitrering_send.ui \
     offshore_lakkering_send.ui \
     plasma_nitrering_send.ui \
+    polering_send.ui \
     pulverlakkering_send.ui \
     sandblaasing_send.ui \
     sender.ui \

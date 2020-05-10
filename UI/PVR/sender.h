@@ -2,6 +2,7 @@
 #define SENDER_H
 
 #include <QWidget>
+
 #include <vaatlakkering_send.h>
 #include <pulverlakkering_send.h>
 #include <offshore_lakkering_send.h>
@@ -22,6 +23,12 @@
 #include <traadskjaering_send.h>
 #include <glass_blaasing_send.h>
 #include <sandblaasing_send.h>
+#include <kuleblaasing_send.h>
+#include <polering_send.h>
+#include <elektrolytisk_polering_send.h>
+#include <forsolving_send.h>
+#include <gullbelegging_send.h>
+#include <fortinning_send.h>
 
 namespace Ui {
 class sender;
@@ -114,11 +121,29 @@ private slots:
     void on_traadskjaering_clicked();                               //trådskjæring
     void tilbake_0_traadskjaering_bedrifter();                      //tilbake fra trådskjæring til annet
 
-    void on_glass_blaasing_clicked();
-    void tilbake_0_glass_blaasing_bedrifter();
+    void on_glass_blaasing_clicked();                               //glass blåsing
+    void tilbake_0_glass_blaasing_bedrifter();                      //tilbake fra glass blåsing til annet
 
-    void on_sandblaasing_clicked();
-    void tilbake_0_sandblaasing_bedrifter();
+    void on_sandblaasing_clicked();                                 //sandblåsing
+    void tilbake_0_sandblaasing_bedrifter();                        //tilbake fra sandblåsing til annet
+
+    void on_kuleblaasing_clicked();                                 //kuleblåsing
+    void tilbake_0_kuleblaasing_bedrifter();                        //tilbake fra kuleblåsing til annet
+
+    void on_polering_clicked();                                     //polering
+    void tilbake_0_polering_bedrifter();                            //tilbake fra polering til annet
+
+    void on_elektrolytisk_polering_clicked();
+    void tilbake_0_elektrolytisk_polering_bedrifter();
+
+    void on_forsolving_gullbelegging_clicked();
+    void tilbake_0_forsolving_bedrifter();
+
+    void on_gullbelegging_clicked();
+    void tilbake_0_gullbelegging_bedrifter();
+
+    void on_fortinning_clicked();
+    void tilbake_0_fortinning_bedrifter();
 
 private:
     Ui::sender *ui;
@@ -146,6 +171,12 @@ private:
     class traadskjaering_send _Traad;                                   //objekt for trådskjæring (Annet)
     class glass_blaasing_send _Glass;                                   //objekt for glass blåsing (Annet)
     class sandblaasing_send _Sand;                                      //objekt for sandblåsing (Annet)
+    class kuleblaasing_send _Kule;                                      //objekt for kuleblåsing (Annet)
+    class polering_send _Poler;                                         //objekt for polering (Annet)
+    class elektrolytisk_polering_send _ElektroPolering;                 //objekt for elektrolytisk polering (Annet)
+    class forsolving_send _Forsolv;                                     //objekt for forsølving/Gullbelegging (Annet)
+    class gullbelegging_send _Gull;                                     //objekt for gullbelegging (Annet)
+    class fortinning_send _Fortinning;                                  //objekt for fortinning (Annet)
 
 signals:
     void x_0_send_clicked(); //avslutt (tilbake til hjem/logg inn) - mainwindow.cpp - SIGNAL
