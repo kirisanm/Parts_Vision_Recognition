@@ -594,7 +594,7 @@
         <string>&lt;</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="herding_2">
+      <widget class="QPushButton" name="herd_herding">
        <property name="geometry">
         <rect>
          <x>110</x>

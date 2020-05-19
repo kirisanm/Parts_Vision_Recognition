@@ -28,7 +28,29 @@ mottar::mottar(QWidget *parent) :
     ui->stackedWidget->insertWidget(8, &_Offshorelakk);                 //setter inn offshore_lakkering.cpp i index 8, side 9
     ui->stackedWidget->insertWidget(9, &_Eloks);                        //Setter inn eloksering.cpp i index 9, side 10
     ui->stackedWidget->insertWidget(10, &_Kromater);                    //Setter inn kromatering.cpp i index 10, side 11
+    ui->stackedWidget->insertWidget(11, &_Elzink);                      //Setter inn elzink.cpp i index 11, side 12
+    ui->stackedWidget->insertWidget(12, &_Hardforkrom);                 //Setter inn hardforkromming.cpp i index 12, side 13
+    ui->stackedWidget->insertWidget(13, &_ElektroFornikling);           //Setter inn elektrolytisk_fornikling.cpp i index 13, side 14
+    ui->stackedWidget->insertWidget(14, &_Fosfat);                      //Setter inn fosfatering.cpp i index 14, side 13
+    ui->stackedWidget->insertWidget(15, &_Galv);                        //Setter inn galvanisering.cpp i index 15, side 16
+    ui->stackedWidget->insertWidget(16, &_Syre);                        //Setter inn syrevask.cpp i index 16, side 17
+    ui->stackedWidget->insertWidget(17, &_Brun);                        //Setter inn brunering.cpp i index 17, side 18
+    ui->stackedWidget->insertWidget(18, &_Herd);                        //Setter inn herding.cpp i index 18, side 19
+    ui->stackedWidget->insertWidget(19, &_SettHerd);                    //Setter inn sett_herding.cpp i index 19, side 20
+    ui->stackedWidget->insertWidget(20, &_Nitrer);                      //Setter inn nitrering.cpp i index 20, side 21
+    ui->stackedWidget->insertWidget(21, &_PlasmaNitrer);                //Setter inn plasma_nitrering.cpp i index 21, side 22
+    ui->stackedWidget->insertWidget(22, &_Sliping);                     //Setter inn sliping.cpp i index 22, side 23
+    ui->stackedWidget->insertWidget(23, &_Traad);                       //Setter inn traadskjaering.cpp i index 23, side 24
+    ui->stackedWidget->insertWidget(24, &_Glass);                       //Setter inn glass_blaasing.cpp i index 24, side 25
+    ui->stackedWidget->insertWidget(25, &_Sand);                        //Setter inn sandblaasing.cpp i index 25, side 26
+    ui->stackedWidget->insertWidget(26, &_Kule);                        //Setter inn kuleblaasing.cpp i index 26, side 27
+    ui->stackedWidget->insertWidget(27, &_Poler);                       //Setter inn polering.cpp i index 27, side 28
+    ui->stackedWidget->insertWidget(28, &_ElektroPolering);             //Setter inn elektrolytisk_polering.cpp i index 28, side 29
+    ui->stackedWidget->insertWidget(29, &_Forsolv);                     //Setter inn forsolving.cpp i index 29, side 30
+    ui->stackedWidget->insertWidget(30, &_Gull);                        //Setter inn gullbelegging.cpp i index 30, side 31
+    ui->stackedWidget->insertWidget(31, &_Fortinning);                  //Setter inn fortinning.cpp i index 31, side 32
 
+    //lakkering
     connect(&_Vaatlakk, SIGNAL(tilbake_0_vaat_bedrifter_clicked()), this, SLOT(tilbake_0_vaat_bedrifter()));
     connect(&_Pulverlakk, SIGNAL(tilbake_0_pulver_bedrifter_clicked()), this, SLOT(tilbake_0_pulver_bedrifter()));
     connect(&_Offshorelakk, SIGNAL(tilbake_0_offshore_bedrifter_clicked()), this, SLOT(tilbake_0_offshore_bedrifter()));
@@ -36,6 +58,33 @@ mottar::mottar(QWidget *parent) :
     //elektrokjemisk_metode
     connect(&_Eloks, SIGNAL(tilbake_0_eloksering_bedrifter_clicked()), this, SLOT(tilbake_0_eloksering_bedrifter()));
     connect(&_Kromater, SIGNAL(tilbake_0_kromatering_bedrifter_clicked()), this, SLOT(tilbake_0_kromatering_bedrifter()));
+    connect(&_Elzink, SIGNAL(tilbake_0_elzink_bedrifter_clicked()), this, SLOT(tilbake_0_elzink_bedrifter()));
+    connect(&_Hardforkrom, SIGNAL(tilbake_0_hardforkromming_bedrifter_clicked()), this, SLOT(tilbake_0_hardforkromming_bedrifter()));
+    connect(&_ElektroFornikling, SIGNAL(tilbake_0_elektrolytisk_fornikling_bedrifter_clicked()), this, SLOT(tilbake_0_elektrolytisk_fornikling_bedrifter()));
+
+    //kjemisk_metode
+    connect(&_Fosfat, SIGNAL(tilbake_0_fosfatering_bedrifter_clicked()), this, SLOT(tilbake_0_fosfatering_bedrifter()));
+    connect(&_Galv, SIGNAL(tilbake_0_galvanisering_bedrifter_clicked()), this, SLOT(tilbake_0_galvanisering_bedrifter()));
+    connect(&_Syre, SIGNAL(tilbake_0_syrevask_bedrifter_clicked()), this, SLOT(tilbake_0_syrevask_bedrifter()));
+    connect(&_Brun, SIGNAL(tilbake_0_brunering_bedrifter_clicked()), this, SLOT(tilbake_0_brunering_bedrifter()));
+
+    //herding
+    connect(&_Herd, SIGNAL(tilbake_0_herding_bedrifter_clicked()), this, SLOT(tilbake_0_herding_bedrifter()));
+    connect(&_SettHerd, SIGNAL(tilbake_0_sett_herding_bedrifter_clicked()), this, SLOT(tilbake_0_sett_herding_bedrifter()));
+    connect(&_Nitrer, SIGNAL(tilbake_0_nitrering_bedrifter_clicked()), this, SLOT(tilbake_0_nitrering_bedrifter()));
+    connect(&_PlasmaNitrer, SIGNAL(tilbake_0_plasma_nitrering_bedrifter_clicked()), this, SLOT(tilbake_0_plasma_nitrering_bedrifter()));
+
+    //annet
+    connect(&_Sliping, SIGNAL(tilbake_0_sliping_bedrifter_clicked()), this, SLOT(tilbake_0_sliping_bedrifter()));
+    connect(&_Traad, SIGNAL(tilbake_0_traadskjaering_bedrifter_clicked()), this, SLOT(tilbake_0_traadskjaering_bedrifter()));
+    connect(&_Glass, SIGNAL(tilbake_0_glass_blaasing_bedrifter_clicked()), this, SLOT(tilbake_0_glass_blaasing_bedrifter()));
+    connect(&_Sand, SIGNAL(tilbake_0_sandblaasing_bedrifter_clicked()), this, SLOT(tilbake_0_sandblaasing_bedrifter()));
+    connect(&_Kule, SIGNAL(tilbake_0_kuleblaasing_bedrifter_clicked()), this, SLOT(tilbake_0_kuleblaasing_bedrifter()));
+    connect(&_Poler, SIGNAL(tilbake_0_polering_bedrifter_clicked()), this, SLOT(tilbake_0_polering_bedrifter()));
+    connect(&_ElektroPolering, SIGNAL(tilbake_0_elektrolytisk_polering_bedrifter_clicked()), this, SLOT(tilbake_0_elektrolytisk_polering_bedrifter()));
+    connect(&_Forsolv, SIGNAL(tilbake_0_forsolving_bedrifter_clicked()), this, SLOT(tilbake_0_forsolving_bedrifter()));
+    connect(&_Gull, SIGNAL(tilbake_0_gullbelegging_bedrifter_clicked()), this, SLOT(tilbake_0_gullbelegging_bedrifter()));
+    connect(&_Fortinning, SIGNAL(tilbake_0_fortinning_bedrifter_clicked()), this, SLOT(tilbake_0_fortinning_bedrifter()));
 }
 
 mottar::~mottar()
@@ -98,23 +147,209 @@ void mottar::on_elektrokjemisk_metode_clicked()
         ui->stackedWidget->setCurrentIndex(2);
     }
 
+    void mottar::on_elzink_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(11);
+    }
+    void mottar::tilbake_0_elzink_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(2);
+    }
+
+    void mottar::on_hardforkromming_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(12);
+    }
+    void mottar::tilbake_0_hardforkromming_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(2);
+    }
+
+    void mottar::on_elektrolytisk_fornikling_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(13);
+    }
+    void mottar::tilbake_0_elektrolytisk_fornikling_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(2);
+    }
+
 //kjemisk metode vindu-------------------------------------------------------------------------------
 void mottar::on_kjemisk_metode_clicked()
 {
     ui->stackedWidget->setCurrentIndex(3);  //index 1 = side 4
 }
+    void mottar::on_fosfatering_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(14);
+    }
+    void mottar::tilbake_0_fosfatering_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(3);
+    }
+
+    void mottar::on_galvanisering_varmforsinking_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(15);
+    }
+    void mottar::tilbake_0_galvanisering_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(3);
+    }
+
+    void mottar::on_syrevask_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(16);
+    }
+    void mottar::tilbake_0_syrevask_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(3);
+    }
+
+    void mottar::on_brunering_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(17);
+    }
+    void mottar::tilbake_0_brunering_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(3);
+    }
 
 //herding vindu-------------------------------------------------------------------------------
 void mottar::on_herding_clicked()
 {
     ui->stackedWidget->setCurrentIndex(4);  //index 1 = side 5
 }
+    void mottar::on_herd_herding_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(18);
+    }
+    void mottar::tilbake_0_herding_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(4);
+    }
+
+    void mottar::on_sett_herding_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(19);
+    }
+    void mottar::tilbake_0_sett_herding_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(4);
+    }
+
+    void mottar::on_nitrering_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(20);
+    }
+    void mottar::tilbake_0_nitrering_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(4);
+    }
+
+    void mottar::on_plasma_nitrering_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(21);
+    }
+    void mottar::tilbake_0_plasma_nitrering_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(4);
+    }
 
 //annet vindu-------------------------------------------------------------------------------
 void mottar::on_annet_clicked()
 {
     ui->stackedWidget->setCurrentIndex(5);  //index 1 = side 6
 }
+    void mottar::on_sliping_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(22);
+    }
+    void mottar::tilbake_0_sliping_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(5);
+    }
+
+    void mottar::on_traadskjaering_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(23);
+    }
+    void mottar::tilbake_0_traadskjaering_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(5);
+    }
+
+    void mottar::on_glass_blaasing_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(24);
+    }
+    void mottar::tilbake_0_glass_blaasing_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(5);
+    }
+
+    void mottar::on_sandblaasing_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(25);
+    }
+    void mottar::tilbake_0_sandblaasing_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(5);
+    }
+
+    void mottar::on_kuleblaasing_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(26);
+    }
+    void mottar::tilbake_0_kuleblaasing_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(5);
+    }
+
+    void mottar::on_polering_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(27);
+    }
+    void mottar::tilbake_0_polering_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(5);
+    }
+
+    void mottar::on_elektrolytisk_polering_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(28);
+    }
+    void mottar::tilbake_0_elektrolytisk_polering_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(5);
+    }
+
+    void mottar::on_forsolving_gullbelegging_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(29);
+    }
+    void mottar::tilbake_0_forsolving_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(5);
+    }
+
+    void mottar::on_gullbelegging_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(30);
+    }
+    void mottar::tilbake_0_gullbelegging_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(5);
+    }
+
+    void mottar::on_fortinning_clicked()
+    {
+        ui->stackedWidget->setCurrentIndex(31);
+    }
+    void mottar::tilbake_0_fortinning_bedrifter()
+    {
+        ui->stackedWidget->setCurrentIndex(5);
+    }
 
 // Tilleggs widgets: --------------------------------------------------------------------------------------------------------
 void mottar::on_tilbake_0_motta_clicked()

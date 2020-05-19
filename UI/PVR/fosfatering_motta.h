@@ -1,19 +1,19 @@
-#ifndef FOSFATERING_SEND_H
-#define FOSFATERING_SEND_H
+#ifndef FOSFATERING_MOTTA_H
+#define FOSFATERING_MOTTA_H
 
 #include <QWidget>
 
 namespace Ui {
-class fosfatering_send;
+class fosfatering_motta;
 }
 
-class fosfatering_send : public QWidget
+class fosfatering_motta : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit fosfatering_send(QWidget *parent = nullptr);
-    ~fosfatering_send();
+    explicit fosfatering_motta(QWidget *parent = nullptr);
+    ~fosfatering_motta();
 
 private slots:
     void on_tilbake_0_fosfatering_bedrifter_clicked();
@@ -25,10 +25,10 @@ private slots:
     void on_tilbake_2_fosfatering_gundersen_clicked();
 
 private:
-    Ui::fosfatering_send *ui;
+    Ui::fosfatering_motta *ui;
 
 signals:
     void tilbake_0_fosfatering_bedrifter_clicked();
 };
 
-#endif // FOSFATERING_SEND_H
+#endif // FOSFATERING_MOTTA_H
