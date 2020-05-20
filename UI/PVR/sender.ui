@@ -17,7 +17,7 @@
    <item row="0" column="0">
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="currentIndex">
-      <number>4</number>
+      <number>5</number>
      </property>
      <widget class="QWidget" name="side_send">
       <widget class="QPushButton" name="x_0_send">
@@ -777,29 +777,11 @@
         <string>Trådskjæring</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="kuleblaasing">
-       <property name="geometry">
-        <rect>
-         <x>70</x>
-         <y>300</y>
-         <width>251</width>
-         <height>161</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>20</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Kuleblåsing</string>
-       </property>
-      </widget>
       <widget class="QPushButton" name="polering">
        <property name="geometry">
         <rect>
-         <x>360</x>
-         <y>300</y>
+         <x>570</x>
+         <y>510</y>
          <width>251</width>
          <height>161</height>
         </rect>
@@ -816,9 +798,9 @@
       <widget class="QPushButton" name="elektrolytisk_polering">
        <property name="geometry">
         <rect>
-         <x>510</x>
+         <x>70</x>
          <y>510</y>
-         <width>431</width>
+         <width>391</width>
          <height>161</height>
         </rect>
        </property>
@@ -835,7 +817,7 @@
        <property name="geometry">
         <rect>
          <x>70</x>
-         <y>510</y>
+         <y>300</y>
          <width>391</width>
          <height>161</height>
         </rect>
@@ -870,7 +852,7 @@
       <widget class="QPushButton" name="fortinning">
        <property name="geometry">
         <rect>
-         <x>650</x>
+         <x>570</x>
          <y>300</y>
          <width>251</width>
          <height>161</height>

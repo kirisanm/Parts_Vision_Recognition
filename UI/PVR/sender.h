@@ -23,7 +23,6 @@
 #include <traadskjaering_send.h>
 #include <glass_blaasing_send.h>
 #include <sandblaasing_send.h>
-#include <kuleblaasing_send.h>
 #include <polering_send.h>
 #include <elektrolytisk_polering_send.h>
 #include <forsolving_send.h>
@@ -44,20 +43,20 @@ public:
 
 private slots:
     //index 0, side 1:
-    void on_x_0_send_clicked(); //avslutt (tilbake til hjem/logg inn) - mainwindow.cpp - KNAPP (x)
+    void on_x_0_send_clicked();                                     //avslutt (tilbake til hjem/logg inn) - mainwindow.cpp - KNAPP (x)
     void on_tilbake_0_send_clicked();
 
-    void on_lakkering_clicked();
-    void on_elektrokjemisk_metode_clicked();
-    void on_kjemisk_metode_clicked();
-    void on_herding_clicked();
-    void on_annet_clicked();
+    void on_lakkering_clicked();                                    //Lakkering - knapp
+    void on_elektrokjemisk_metode_clicked();                        //Elektrokjemisk_metode - knapp
+    void on_kjemisk_metode_clicked();                               //Kjemisk_metode - knapp
+    void on_herding_clicked();                                      //Herding - knapp
+    void on_annet_clicked();                                        //Annet - knapp
 
-    void on_tilbake_1_lakk_send_clicked();
-    void on_tilbake_2_elkj_send_clicked();
-    void on_tilbake_3_kj_send_clicked();
-    void on_tilbake_4_herd_send_clicked();
-    void on_tilbake_5_annet_send_clicked();
+    void on_tilbake_1_lakk_send_clicked();                          //tilbakeknapp i lakkeringvindu
+    void on_tilbake_2_elkj_send_clicked();                          //tilbakeknapp i elektrokjemisk_metode vindu
+    void on_tilbake_3_kj_send_clicked();                            //tilbakeknapp i kjemisk_metode vindu
+    void on_tilbake_4_herd_send_clicked();                          //tilbakeknapp i herding vindu
+    void on_tilbake_5_annet_send_clicked();                         //tilbakeknapp i annet vinudu
 
 //Lakkeringsvindu---------------------------------------------------------------------------------------------------------------------
     void on_vaatlakkering_clicked();                                //Våtlakkering
@@ -127,9 +126,6 @@ private slots:
     void on_sandblaasing_clicked();                                 //sandblåsing
     void tilbake_0_sandblaasing_bedrifter();                        //tilbake fra sandblåsing til annet
 
-    void on_kuleblaasing_clicked();                                 //kuleblåsing
-    void tilbake_0_kuleblaasing_bedrifter();                        //tilbake fra kuleblåsing til annet
-
     void on_polering_clicked();                                     //polering
     void tilbake_0_polering_bedrifter();                            //tilbake fra polering til annet
 
@@ -147,40 +143,39 @@ private slots:
 
 private:
     Ui::sender *ui;
-    class vaatlakkering_send _Vaatlakk;                                 //objekt for våtlakkering
-    class pulverlakkering_send _Pulverlakk;                             //objekt for pulverlakkering
-    class offshore_lakkering_send _Offshorelakk;                        //objekt for offshore lakkering
+    class vaatlakkering_send _Vaatlakk;                             //objekt for våtlakkering
+    class pulverlakkering_send _Pulverlakk;                         //objekt for pulverlakkering
+    class offshore_lakkering_send _Offshorelakk;                    //objekt for offshore lakkering
 
-    class eloksering_send _Eloks;                                       //objekt for eloksering (elektrokjemisk metode)
-    class kromatering_send _Kromater;                                   //objekt for kromatering (elektrokjemisk metode)
-    class elzink_send _Elzink;                                          //objekt for elzink (elektrokjemisk metode)
-    class hardforkromming_send _Hardforkrom;                            //objekt for hardforkromming (elektrokjemisk metode)
-    class elektrolytisk_fornikling_send _ElektroFornikling;             //objekt for elektrolytisk fornikling (elektrokjemisk metode)
+    class eloksering_send _Eloks;                                   //objekt for eloksering (elektrokjemisk metode)
+    class kromatering_send _Kromater;                               //objekt for kromatering (elektrokjemisk metode)
+    class elzink_send _Elzink;                                      //objekt for elzink (elektrokjemisk metode)
+    class hardforkromming_send _Hardforkrom;                        //objekt for hardforkromming (elektrokjemisk metode)
+    class elektrolytisk_fornikling_send _ElektroFornikling;         //objekt for elektrolytisk fornikling (elektrokjemisk metode)
 
-    class fosfatering_send _Fosfat;                                     //objekt for fosfatering (kjemisk metode)
-    class galvanisering_send _Galv;                                     //objekt for galvanisering/varmforsinking (kjemisk metode)
-    class syrevask_send _Syre;                                          //objekt for syrevask (kjemisk metode)
-    class brunering_send _Brun;                                         //objekt for brunering (kjemisk metode)
+    class fosfatering_send _Fosfat;                                 //objekt for fosfatering (kjemisk metode)
+    class galvanisering_send _Galv;                                 //objekt for galvanisering/varmforsinking (kjemisk metode)
+    class syrevask_send _Syre;                                      //objekt for syrevask (kjemisk metode)
+    class brunering_send _Brun;                                     //objekt for brunering (kjemisk metode)
 
-    class herding_send _Herd;                                           //objekt for herding (herding)
-    class sett_herding_send _SettHerd;                                  //objekt for sett-herding (herding)
-    class nitrering_send _Nitrer;                                       //objekt for nitrering (herding)
-    class plasma_nitrering_send _PlasmaNitrer;                          //objekt for plasma nitrering (herding)
+    class herding_send _Herd;                                       //objekt for herding (herding)
+    class sett_herding_send _SettHerd;                              //objekt for sett-herding (herding)
+    class nitrering_send _Nitrer;                                   //objekt for nitrering (herding)
+    class plasma_nitrering_send _PlasmaNitrer;                      //objekt for plasma nitrering (herding)
 
-    class sliping_send _Sliping;                                        //objekt for sliping (Annet)
-    class traadskjaering_send _Traad;                                   //objekt for trådskjæring (Annet)
-    class glass_blaasing_send _Glass;                                   //objekt for glass blåsing (Annet)
-    class sandblaasing_send _Sand;                                      //objekt for sandblåsing (Annet)
-    class kuleblaasing_send _Kule;                                      //objekt for kuleblåsing (Annet)
-    class polering_send _Poler;                                         //objekt for polering (Annet)
-    class elektrolytisk_polering_send _ElektroPolering;                 //objekt for elektrolytisk polering (Annet)
-    class forsolving_send _Forsolv;                                     //objekt for forsølving/Gullbelegging (Annet)
-    class gullbelegging_send _Gull;                                     //objekt for gullbelegging (Annet)
-    class fortinning_send _Fortinning;                                  //objekt for fortinning (Annet)
+    class sliping_send _Sliping;                                    //objekt for sliping (Annet)
+    class traadskjaering_send _Traad;                               //objekt for trådskjæring (Annet)
+    class glass_blaasing_send _Glass;                               //objekt for glass blåsing (Annet)
+    class sandblaasing_send _Sand;                                  //objekt for sandblåsing (Annet)
+    class polering_send _Poler;                                     //objekt for polering (Annet)
+    class elektrolytisk_polering_send _ElektroPolering;             //objekt for elektrolytisk polering (Annet)
+    class forsolving_send _Forsolv;                                 //objekt for forsølving/Gullbelegging (Annet)
+    class gullbelegging_send _Gull;                                 //objekt for gullbelegging (Annet)
+    class fortinning_send _Fortinning;                              //objekt for fortinning (Annet)
 
 signals:
-    void x_0_send_clicked(); //avslutt (tilbake til hjem/logg inn) - mainwindow.cpp - SIGNAL
-    void tilbake_0_send_clicked();
+    void x_0_send_clicked();                                        //avslutt (tilbake til hjem/logg inn) - mainwindow.cpp - SIGNAL
+    void tilbake_0_send_clicked();                                  //Tilbakeknapp i send.cpp filen - SIGNAL
 };
 
 #endif // SENDER_H

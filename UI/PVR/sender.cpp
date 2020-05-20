@@ -43,12 +43,11 @@ sender::sender(QWidget *parent) :
     ui->stackedWidget->insertWidget(23, &_Traad);                       //Setter inn traadskjaering.cpp i index 23, side 24
     ui->stackedWidget->insertWidget(24, &_Glass);                       //Setter inn glass_blaasing.cpp i index 24, side 25
     ui->stackedWidget->insertWidget(25, &_Sand);                        //Setter inn sandblaasing.cpp i index 25, side 26
-    ui->stackedWidget->insertWidget(26, &_Kule);                        //Setter inn kuleblaasing.cpp i index 26, side 27
-    ui->stackedWidget->insertWidget(27, &_Poler);                       //Setter inn polering.cpp i index 27, side 28
-    ui->stackedWidget->insertWidget(28, &_ElektroPolering);             //Setter inn elektrolytisk_polering.cpp i index 28, side 29
-    ui->stackedWidget->insertWidget(29, &_Forsolv);                     //Setter inn forsolving.cpp i index 29, side 30
-    ui->stackedWidget->insertWidget(30, &_Gull);                        //Setter inn gullbelegging.cpp i index 30, side 31
-    ui->stackedWidget->insertWidget(31, &_Fortinning);                  //Setter inn fortinning.cpp i index 31, side 32
+    ui->stackedWidget->insertWidget(26, &_Poler);                       //Setter inn polering.cpp i index 27, side 28
+    ui->stackedWidget->insertWidget(27, &_ElektroPolering);             //Setter inn elektrolytisk_polering.cpp i index 28, side 29
+    ui->stackedWidget->insertWidget(28, &_Forsolv);                     //Setter inn forsolving.cpp i index 29, side 30
+    ui->stackedWidget->insertWidget(29, &_Gull);                        //Setter inn gullbelegging.cpp i index 30, side 31
+    ui->stackedWidget->insertWidget(30, &_Fortinning);                  //Setter inn fortinning.cpp i index 31, side 32
 
     //Lakkering
     connect(&_Vaatlakk, SIGNAL(tilbake_0_vaat_bedrifter_clicked()), this, SLOT(tilbake_0_vaat_bedrifter()));
@@ -79,7 +78,6 @@ sender::sender(QWidget *parent) :
     connect(&_Traad, SIGNAL(tilbake_0_traadskjaering_bedrifter_clicked()), this, SLOT(tilbake_0_traadskjaering_bedrifter()));
     connect(&_Glass, SIGNAL(tilbake_0_glass_blaasing_bedrifter_clicked()), this, SLOT(tilbake_0_glass_blaasing_bedrifter()));
     connect(&_Sand, SIGNAL(tilbake_0_sandblaasing_bedrifter_clicked()), this, SLOT(tilbake_0_sandblaasing_bedrifter()));
-    connect(&_Kule, SIGNAL(tilbake_0_kuleblaasing_bedrifter_clicked()), this, SLOT(tilbake_0_kuleblaasing_bedrifter()));
     connect(&_Poler, SIGNAL(tilbake_0_polering_bedrifter_clicked()), this, SLOT(tilbake_0_polering_bedrifter()));
     connect(&_ElektroPolering, SIGNAL(tilbake_0_elektrolytisk_polering_bedrifter_clicked()), this, SLOT(tilbake_0_elektrolytisk_polering_bedrifter()));
     connect(&_Forsolv, SIGNAL(tilbake_0_forsolving_bedrifter_clicked()), this, SLOT(tilbake_0_forsolving_bedrifter()));
@@ -301,18 +299,9 @@ void sender::on_annet_clicked()
         ui->stackedWidget->setCurrentIndex(5);
     }
 
-    void sender::on_kuleblaasing_clicked()
-    {
-        ui->stackedWidget->setCurrentIndex(26);
-    }
-    void sender::tilbake_0_kuleblaasing_bedrifter()
-    {
-        ui->stackedWidget->setCurrentIndex(5);
-    }
-
     void sender::on_polering_clicked()
     {
-        ui->stackedWidget->setCurrentIndex(27);
+        ui->stackedWidget->setCurrentIndex(26);
     }
     void sender::tilbake_0_polering_bedrifter()
     {
@@ -321,7 +310,7 @@ void sender::on_annet_clicked()
 
     void sender::on_elektrolytisk_polering_clicked()
     {
-        ui->stackedWidget->setCurrentIndex(28);
+        ui->stackedWidget->setCurrentIndex(27);
     }
     void sender::tilbake_0_elektrolytisk_polering_bedrifter()
     {
@@ -330,7 +319,7 @@ void sender::on_annet_clicked()
 
     void sender::on_forsolving_gullbelegging_clicked()
     {
-        ui->stackedWidget->setCurrentIndex(29);
+        ui->stackedWidget->setCurrentIndex(28);
     }
     void sender::tilbake_0_forsolving_bedrifter()
     {
@@ -339,7 +328,7 @@ void sender::on_annet_clicked()
 
     void sender::on_gullbelegging_clicked()
     {
-        ui->stackedWidget->setCurrentIndex(30);
+        ui->stackedWidget->setCurrentIndex(29);
     }
     void sender::tilbake_0_gullbelegging_bedrifter()
     {
@@ -348,7 +337,7 @@ void sender::on_annet_clicked()
 
     void sender::on_fortinning_clicked()
     {
-        ui->stackedWidget->setCurrentIndex(31);
+        ui->stackedWidget->setCurrentIndex(30);
     }
     void sender::tilbake_0_fortinning_bedrifter()
     {
@@ -356,37 +345,37 @@ void sender::on_annet_clicked()
     }
 
 // Tilleggs widgets: --------------------------------------------------------------------------------------------------------
-void sender::on_x_0_send_clicked()
+void sender::on_x_0_send_clicked()                                     //Avslutt --> Hjem/Logg inn - SIGNAL
 {
-    emit x_0_send_clicked(); // avslutter og tilbake til hjem (index 0, side 1 i main).
+    emit x_0_send_clicked();                // avslutter og tilbake til hjem (index 0, side 1 i main).
 }
 
-void sender::on_tilbake_0_send_clicked()
+void sender::on_tilbake_0_send_clicked()                               //tilbakeknapp i motta.cpp --> Hjem/logg inn - SIGNAL
 {
-    emit tilbake_0_send_clicked(); //ett hakk tilbake (index 0, side 1 i sender) - Destinasjon: SEND og MOTTA
+    emit tilbake_0_send_clicked();          //ett hakk tilbake (index 0, side 1 i sender) - Destinasjon: SEND og MOTTA
 }
 
-void sender::on_tilbake_1_lakk_send_clicked()
+void sender::on_tilbake_1_lakk_send_clicked()                          //tilbakeknapp i lakkering vindu
 {
-    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(0);  //tilbake til index 0, side 1
 }
 
-void sender::on_tilbake_2_elkj_send_clicked()
+void sender::on_tilbake_2_elkj_send_clicked()                          //tilbakeknapp i elektrokjemisk_metode vindu
 {
-    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(0);  //tilbake til index 0, side 1
 }
 
-void sender::on_tilbake_3_kj_send_clicked()
+void sender::on_tilbake_3_kj_send_clicked()                            //tilbakeknapp i kjemisk_metode vindu
 {
-    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(0);  //tilbake til index 0, side 1
 }
 
-void sender::on_tilbake_4_herd_send_clicked()
+void sender::on_tilbake_4_herd_send_clicked()                          //tilbakeknapp i herding vindu
 {
-    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(0);  //tilbake til index 0, side 1
 }
 
-void sender::on_tilbake_5_annet_send_clicked()
+void sender::on_tilbake_5_annet_send_clicked()                         //tilbakeknapp i annet vindu
 {
-    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(0);  //tilbake til index 0, side 1
 }

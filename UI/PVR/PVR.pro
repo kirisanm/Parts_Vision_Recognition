@@ -44,8 +44,6 @@ SOURCES += \
     herding_send.cpp \
     kromatering_motta.cpp \
     kromatering_send.cpp \
-    kuleblaasing_motta.cpp \
-    kuleblaasing_send.cpp \
     main.cpp \
     mainwindow.cpp \
     mottar.cpp \
@@ -102,8 +100,6 @@ HEADERS += \
     herding_send.h \
     kromatering_motta.h \
     kromatering_send.h \
-    kuleblaasing_motta.h \
-    kuleblaasing_send.h \
     mainwindow.h \
     mottar.h \
     nitrering_motta.h \
