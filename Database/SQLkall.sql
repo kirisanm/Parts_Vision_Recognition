@@ -1,5 +1,5 @@
 
-// dette er et sql kall for å sjekke om riktig gyldig brukernavn og passord er tastet inn
+// dette er et sql kall for å sjekke om riktig gyldig brukernavn og passord er tastet inn.
 
 Qstring brukernavn = ui->brukernavn->text(); // setter brukernavn variablen som det som står i brukernavnteksboksen
 Qstring passord = ui->passord->text(); // setter passord variablen som det som står i passordtekstboksen
